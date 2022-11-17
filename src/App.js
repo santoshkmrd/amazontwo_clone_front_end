@@ -1,10 +1,12 @@
 import React from "react";
-import NavbarContainer from "./components/layout/navbar/NavbarContainer";
+// import NavbarContainer from "./components/layout/navbar/NavbarContainer";
+import LandingPage from "./components/layout/LandingPage";
 
 function App() {
   return (
     <div>
-      <NavbarContainer />
+      {/* <NavbarContainer /> */}
+      <LandingPage />
     </div>
   );
 }
