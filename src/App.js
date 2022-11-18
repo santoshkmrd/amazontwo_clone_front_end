@@ -1,14 +1,13 @@
 import React from "react";
-
-// import NavbarContainer from "./components/layout/navbar/NavbarContainer";
 import LandingPage from "./components/layout/LandingPage";
+import {useTranslation} from "react-i18next";
+
 
 function App() {
+  const [t, i18n] = useTranslation('common');
   return (
     <div>
-      {/* <NavbarContainer /> */}
-      <LandingPage />
-      
+      <LandingPage t={t} i18={i18n} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 
 function NavbarView(props) {
+  const {t, i18n} = props;
   return (
     <React.Fragment>
       {/* <!-- Navbar Starts --> */}
