@@ -9,7 +9,7 @@ import common_bd from "./translations/bd/common.json";
 import common_en from "./translations/en/common.json";
 
 i18next.init({
-  whitelist: ['pk', 'in', 'bd', 'en'],
+  whitelist: ['en', 'bd', 'pk', 'in'],
   interpolation: { escapeValue: false }, // React already does escaping
   lng: "en", // language to use
   resources: {

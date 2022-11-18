@@ -11,7 +11,7 @@ function ImageSlider() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <a href="https://www.google.com">
+            <a href="#">
               <img
                 src="assets/img/slider/slide01.png"
                 className="d-block w-100"
@@ -21,7 +21,7 @@ function ImageSlider() {
             </a>
           </div>
           <div className="carousel-item">
-            <a href="https://www.google.com">
+            <a href="#">
               <img
                 src="assets/img/slider/slide02.png"
                 className="d-block w-100"
@@ -31,7 +31,7 @@ function ImageSlider() {
             </a>
           </div>
           <div className="carousel-item">
-            <a href="https://www.google.com">
+            <a href="#">
               <img
                 src="assets/img/slider/slide03.png"
                 className="d-block w-100"
@@ -41,7 +41,7 @@ function ImageSlider() {
             </a>
           </div>
           <div className="carousel-item ">
-            <a href="https://www.google.com">
+            <a href="#">
               <img
                 src="assets/img/slider/slide04.png"
                 className="d-block w-100"
@@ -51,7 +51,7 @@ function ImageSlider() {
             </a>
           </div>
           <div className="carousel-item">
-            <a href="https://www.google.com">
+            <a href="#">
               <img
                 src="assets/img/slider/slide05.png"
                 className="d-block w-100"

@@ -7,7 +7,7 @@ function App() {
   const [t, i18n] = useTranslation('common');
   return (
     <div>
-      <LandingPage t={t} i18={i18n} />
+      <LandingPage t={t} i18n={i18n} />
     </div>
   );
 }
