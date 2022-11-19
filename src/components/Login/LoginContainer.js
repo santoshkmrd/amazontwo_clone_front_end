@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LoginView from "./LoginView";
 
+
 class LoginContainer extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class LoginContainer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
     console.log(this.state);
   };
 
