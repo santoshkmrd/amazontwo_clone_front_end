@@ -282,10 +282,10 @@ function NavbarView(props) {
                   </Link>
                   <small>
                     {t("navbar.menu_signin_sub_title")}?
-                    <a href="register.html">
+                    <Link to="/register">
                       {" "}
                       {t("navbar.menu_signin_register_text")}
-                    </a>
+                    </Link>
                   </small>
                 </div>
               </div>
