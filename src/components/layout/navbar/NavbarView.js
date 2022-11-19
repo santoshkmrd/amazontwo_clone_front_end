@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function NavbarView(props) {
   const { t, rtl } = props;
 
@@ -29,22 +29,30 @@ function NavbarView(props) {
             role="document"
           >
             <div className="drawer-header bg-dark text-white">
-              <h4 className={`drawer-title mx-auto ${rtl}`} id="drawer-demo-title">
+              <h4
+                className={`drawer-title mx-auto ${rtl}`}
+                id="drawer-demo-title"
+              >
                 <i className="fas fa-user-circle"></i>
                 {t("navbar.sidebar_title")}
               </h4>
             </div>
             <div className="drawer-body">
-              <h6 className={`text-muted text-uppercase ${rtl}`}>{t("navbar.sidebar_help_title")}</h6>
+              <h6 className={`text-muted text-uppercase ${rtl}`}>
+                {t("navbar.sidebar_help_title")}
+              </h6>
               <a
                 href="your_account.html"
                 className={`btn btn-outline-success my-2 btn-sm ${rtl}`}
               >
                 {t("navbar.btn_account_title")}
               </a>
-              <a href="login.html" className={`btn btn-warning my-2  btn-sm ${rtl}`}>
-              {t("navbar.btn_signin_title")}
-              </a>
+              <Link
+                to="/login"
+                className={`btn btn-warning my-2  btn-sm ${rtl}`}
+              >
+                {t("navbar.btn_signin_title")}
+              </Link>
             </div>
             <div className="drawer-footer">
               <button
@@ -60,14 +68,14 @@ function NavbarView(props) {
         </div>
         {/*<!-- Drawer Ends --> */}
 
-        <a className="navbar-brand pl-2" href="navbar.html">
+        <Link className="navbar-brand pl-2" to="/">
           <img
             src="assets/img/amazon_logo_white.png"
             height="30"
             width="100"
             alt="amazon logo white"
           />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -266,14 +274,18 @@ function NavbarView(props) {
               </a>
               <div className="dropdown-menu px-3" aria-labelledby="userAccount">
                 <div className="d-flex flex-column justify-content-center">
-                  <a
-                    href="login.html"
+                  <Link
+                    to="login"
                     className={`btn btn-warning w-75 btn-sm font-weight-bold ${rtl}`}
                   >
                     {t("navbar.menu_signin_btn_title")}
-                  </a>
+                  </Link>
                   <small>
-                  {t("navbar.menu_signin_sub_title")}?<a href="register.html"> {t("navbar.menu_signin_register_text")}</a>
+                    {t("navbar.menu_signin_sub_title")}?
+                    <a href="register.html">
+                      {" "}
+                      {t("navbar.menu_signin_register_text")}
+                    </a>
                   </small>
                 </div>
               </div>

@@ -1,20 +1,17 @@
-import React from 'react'
-import NavbarContainer from './navbar/NavbarContainer';
-import ImageSlider from './ImageSlider';
-import HomePageProductContainer from '../HomePageProduct/HomePageProductContainer';
-import Footer from './Footer';
+import React from "react";
+
+import ImageSlider from "./ImageSlider";
+import HomePageProductContainer from "../HomePageProduct/HomePageProductContainer";
 
 function LandingPage(props) {
   return (
     <React.Fragment>
-        <NavbarContainer {...props} />
-        <div className='container-fluid px-0'>
-            <ImageSlider />
-            <HomePageProductContainer />
-            <Footer {...props} />
-        </div>
+      <div className="container-fluid px-0">
+        <ImageSlider />
+        <HomePageProductContainer />
+      </div>
     </React.Fragment>
-  )
+  );
 }
 
 export default LandingPage;

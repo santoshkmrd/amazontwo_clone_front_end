@@ -1,21 +1,26 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./components/layout/LandingPage";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import NavbarContainer from "./components/layout/navbar/NavbarContainer";
 import Footer from "./components/layout/Footer";
 import LoginContainer from "./components/Login/LoginContainer";
 
-
 function App() {
-  const [t, i18n] = useTranslation('common');
+  const [t, i18n] = useTranslation("common");
+  const Login = () => <LoginContainer t={t} i18n={i18n} />;
+  const Landing = () => <LandingPage t={t} i18n={i18n} />;
   return (
-    <div>
-      {/* <LandingPage t={t} i18n={i18n} /> */}
-      <NavbarContainer t={t} i18n={i18n} />
-      <LoginContainer />
-      <Footer t={t} i18n={i18n} />
-
-    </div>
+    <>
+      <BrowserRouter>
+        <NavbarContainer t={t} i18n={i18n} />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer t={t} i18n={i18n} />
+      </BrowserRouter>
+    </>
   );
 }
 
