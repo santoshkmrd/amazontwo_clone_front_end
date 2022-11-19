@@ -133,12 +133,15 @@ function NavbarView(props) {
                 size="50"
                 name="query"
                 id="query"
+                onChange={props.handleQueryChange}
+                value ={props.query}
               />
               <input
                 type="text"
                 name="category"
                 id="category"
-                value="book"
+                value={props.selectedCat}
+                readOnly
                 hidden
               />
               <div className="input-group-append">
@@ -176,7 +179,7 @@ function NavbarView(props) {
                       name="prefLang"
                       id="englishLang"
                       value="en"
-                      onClick={props.handleChangeLang}
+                      onChange={props.handleChangeLang}
                       checked={props.prefLang == "en" ? true : false}
                     />
                     <label
@@ -199,7 +202,7 @@ function NavbarView(props) {
                       name="prefLang"
                       id="hindiLang"
                       value="in"
-                      onClick={props.handleChangeLang}
+                      onChange={props.handleChangeLang}
                       checked={props.prefLang == "in" ? true : false}
                     />
                     <label className="custom-control-label" htmlFor="hindiLang">
@@ -219,7 +222,7 @@ function NavbarView(props) {
                       name="prefLang"
                       id="urduLang"
                       value="pk"
-                      onClick={props.handleChangeLang}
+                      onChange={props.handleChangeLang}
                       checked={props.prefLang == "pk" ? true : false}
                     />
                     <label className="custom-control-label" htmlFor="urduLang">
@@ -239,7 +242,7 @@ function NavbarView(props) {
                       name="prefLang"
                       id="banglaLang"
                       value="bd"
-                      onClick={props.handleChangeLang}
+                      onChange={props.handleChangeLang}
                       checked={props.prefLang == "bd" ? true : false}
                     />
                     <label
